@@ -1,0 +1,54 @@
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+def browsersDir = "${buildDir}/browsers"
+def driversDir = "${buildDir}/drivers"
+
+repositories {
+
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+    dependencies {
+    }
+}
+
+configurations {
+    drivers
+    browsersDep
+}
+
+dependencies {
+    drivers "browser:chromedriver_win32:2.26@zip"
+    drivers "browser:chromedriver_mac:2.26@zip"
+
+    drivers "browser:geckodriver:0.14.0:win32@zip"
+    drivers "browser:geckodriver:0.14.0:mac@zip"
+
+    browsersDep "browser.chromium.stable:win32:53.0.2785.0@zip"
+    browsersDep "browser.chromium.stable:mac:53.0.2785.0@zip"
+
+    browsersDep "browser:firefox-win32:41.0@zip"
+    browsersDep "browser:firefox-mac:41.0@zip"
+}
+
+task copyBrowsers(type: Sync) {
+    from { configurations.browsersDep.collect { zipTree(it) } }
+    into browsersDir
+
+    doLast {
+        file(browsersDir).eachDirMatch(~/(chrome|firefox)-.*/) {
+            def newName = it.name.replaceAll(/-.*/, '')
+            it.renameTo("${browsersDir}/${newName}")
+        }
+    }
+}
+
+task copyDrivers(type: Sync, dependsOn: copyBrowsers) {
+    from { configurations.drivers.collect { driver -> zipTree(driver) } }
+    into driversDir
+}
