@@ -4,6 +4,8 @@ repositories {
     mavenCentral()
 }
 
+sourceCompatibility = 1.8
+
 dependencies {
     compile 'junit:junit:4.11'
     compile 'org.seleniumhq.selenium:selenium-java:3.4.0'
@@ -12,32 +14,4 @@ dependencies {
     testCompile 'junit:junit:4.11'
     testCompile 'org.seleniumhq.selenium:selenium-java:3.4.0'
     testCompile 'log4j:log4j:1.2.16'
-}
-
-def os = System.getProperty('os.name').split(' ')[0].toLowerCase()
-
-task testing (type: Test) {
-
-    reports {
-        html.destination = reporting.file("test/tests")
-        junitXml.destination = file("$buildDir/test-results/tests")
-    }
-
-    systemProperty 'webdriver.provided.type', 'CustomDriver'
-    systemProperty 'webdriver.provided.CustomDriver', 'caplin.example.utils.CustomDriver'
-
-    switch (os) {
-        case 'win32':
-            systemProperty 'webdriver.chrome.driver', 'src/main/resources/windows/chromedriver'
-            break
-        case 'mac':
-            systemProperty 'webdriver.chrome.driver', 'src/main/resources/mac/chromedriver'
-            break
-        case 'linux':
-            systemProperty 'webdriver.chrome.driver', 'src/main/resources/linux/chromedriver'
-            break
-        default:
-            throw new GradleException("Unknown os: " + os + ". Must be one of linux, win32, or mac")
-            break
-    }
 }

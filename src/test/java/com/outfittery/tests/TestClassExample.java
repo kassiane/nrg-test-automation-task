@@ -1,10 +1,10 @@
-package com.outfittery;
+package com.outfittery.tests;
 
 import com.outfittery.base.BaseTest;
 import com.outfittery.pages.HomePage;
 import org.junit.Test;
 
-public class TestClass extends BaseTest{
+public class TestClassExample extends BaseTest{
 
     HomePage homePage;
 

@@ -9,9 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
 
-    public static WebDriver driver;
+    protected static WebDriver driver;
 
-    public static void setSystemPathForDrivers() {
+    private static void setSystemPathForDrivers() {
         String os = null;
         String osFullName = System.getProperty("os.name");
 
