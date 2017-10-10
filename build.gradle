@@ -1,11 +1,4 @@
 apply plugin: 'java'
-//apply plugin: 'idea'
-//apply plugin: 'eclipse'
-//apply plugin: 'maven'
-
-
-//def browsersDir = "${buildDir}/browsers"
-//def driversDir = "${buildDir}/drivers"
 
 repositories {
     mavenCentral()
@@ -22,9 +15,6 @@ dependencies {
 }
 
 def os = System.getProperty('os.name').split(' ')[0].toLowerCase()
-if (os == 'windows') {
-    os = 'win32'
-}
 
 task testing (type: Test) {
 

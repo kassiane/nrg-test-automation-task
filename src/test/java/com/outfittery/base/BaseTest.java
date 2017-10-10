@@ -25,7 +25,7 @@ public class BaseTest {
             throw new IllegalStateException("OS not supported");
         }
 
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/" + os + "/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/"+ os + "/chromedriver");
     }
 
     @Before

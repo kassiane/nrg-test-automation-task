@@ -4,9 +4,9 @@ import com.outfittery.base.BaseTest;
 import com.outfittery.pages.HomePage;
 import org.junit.Test;
 
-public class TestClass extends BaseTest {
+public class TestClass extends BaseTest{
 
-    private HomePage homePage;
+    HomePage homePage;
 
     @Test
     public void loginButtonShouldBeAvailable(){
