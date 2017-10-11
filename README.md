@@ -22,7 +22,7 @@ There is already a test class example: TestClassExample
 `./gradlew build` for Linux and Mac or `gradlew.bat build` for Windows
 
 3) To run the tests
-`./gradlew clean test`
+`./gradlew clean test` for Linux and Mac or `gradlew.bat test` for Windows
 
 ## Useful Links
 
