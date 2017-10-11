@@ -14,6 +14,7 @@ public class BaseTest {
     private static void setSystemPathForDrivers() {
         String os = null;
         String osFullName = System.getProperty("os.name");
+        String driver = "chromedriver";
 
         if (osFullName.toLowerCase().contains("mac")) {
             os = "mac";
@@ -21,6 +22,7 @@ public class BaseTest {
             os = "linux";
         } else if (osFullName.toLowerCase().contains("windows")) {
             os = "windows";
+            driver = "chromedriver.exe";
         } else {
             throw new IllegalStateException("OS not supported");
         }
