@@ -1,8 +1,7 @@
 # QA Engineer Task
 > Outfittery - Team NRG
 
-Hello! If you're looking at this repository, it means you're considering work at Outfittery, and that's awesome! 
-Thank you for considering working with us!
+Hello! If you're looking at this repository, it means you're considering work at Outfittery, and that's awesome! Thank you for considering working with us!
 
 So, this repository is nothing but a simple boilerplate to help you setting up your automation work for the task. It contains a simple set up of automation project and one test class as example. 
 
@@ -10,7 +9,7 @@ There certainly is a lot of room for improvement. During your coding task, if yo
 
 ## Prerequisites
 
-The project runs on Linux, Mac or Windows plataforms and Google Chrome browser.
+The project runs on Linux, Mac or Windows platforms and Google Chrome browser.
 
 ## Running the example test:
 
@@ -27,7 +26,7 @@ There is already a test class example: TestClassExample
 
 ## Useful Links
 
-[http://www.seleniumhq.org/]
+http://www.seleniumhq.org/
 
 ## Questions? Complaints? Suggestions?
 

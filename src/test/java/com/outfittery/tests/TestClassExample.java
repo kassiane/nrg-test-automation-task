@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class TestClassExample extends BaseTest{
 
-    HomePage homePage;
+    private HomePage homePage;
 
     @Test
     public void loginButtonShouldBeAvailable(){
