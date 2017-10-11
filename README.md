@@ -19,7 +19,7 @@ There is already a test class example: TestClassExample
 `git clone https://github.com/paulsecret/nrg-test-automation-task.git`
 
 2) Build the project, it will trigger the tests
-`./gradlew build`
+`./gradlew build` for Linux and Mac or `gradlew.bat build` for Windows
 
 3) To run the tests
 `./gradlew clean test`
