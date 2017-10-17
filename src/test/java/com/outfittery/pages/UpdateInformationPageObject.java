@@ -14,16 +14,16 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
  */
 public class UpdateInformationPageObject {
 
-	@FindBy(css = ".user-info__firstname")
+	@FindBy(css = ".user-info__firstname > input")
 	private WebElement firstName;
 
-	@FindBy(css = ".user-info__lastname")
+	@FindBy(css = ".user-info__lastname > input")
 	private WebElement lastName;
 
-	@FindBy(css = ".prefix")
+	@FindBy(css = ".prefix > input")
 	private WebElement prefix;
 
-	@FindBy(css = ".number")
+	@FindBy(css = ".number > input")
 	private WebElement phone;
 
 	@FindBy(css = ".rounded")

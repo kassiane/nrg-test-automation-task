@@ -25,7 +25,7 @@ public class UpdateInformationAction {
 
 	public UpdateInformationAction typeFirstName(final String firstName) {
 		this.updateInformationPage.getFirstName().click();
-		this.updateInformationPage.getFirstName().sendKeys("");
+		this.updateInformationPage.getFirstName().clear();
 		this.updateInformationPage.getFirstName().sendKeys(firstName);
 
 		return this;
