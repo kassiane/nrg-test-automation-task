@@ -21,7 +21,7 @@ public class UpdateInformationTest extends BaseTest {
 	}
 
 	@Test
-	public void shouldNotBePossibleToSavePhoneNumberWithLetters() {
+	public void updateFirstName() {
 		driver.navigate().to(OutfitteryPaths.getHomePageURL());
 		HomePageObject homePageObject = new HomePageObject(driver);
 		HomePageAction homePageAction = new HomePageAction(homePageObject);
@@ -38,7 +38,9 @@ public class UpdateInformationTest extends BaseTest {
 		UpdateInformationPageObject updateInformationPageObject = new UpdateInformationPageObject(driver);
 		UpdateInformationAction updateInformationAction = new UpdateInformationAction(updateInformationPageObject);
 
-		updateInformationAction.typePhoneNumber("111222abcde").clickOnSaveButton();
+		StringBuilder newFirstName = new StringBuilder(outfitteryUser.getUserFirstName()).append(System.currentTimeMillis());
+		
+		updateInformationAction.typeFirstName(newFirstName.toString()).clickOnSaveButton();
 
 	}
 }

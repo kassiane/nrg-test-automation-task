@@ -24,13 +24,15 @@ public class UpdateInformationAction {
 	}
 
 	public UpdateInformationAction typeFirstName(final String firstName) {
-		this.updateInformationPage.getFirstName().clear();
+		this.updateInformationPage.getFirstName().click();
+		this.updateInformationPage.getFirstName().sendKeys("");
 		this.updateInformationPage.getFirstName().sendKeys(firstName);
 
 		return this;
 	}
 
 	public UpdateInformationAction typeLastName(final String lastName) {
+		this.updateInformationPage.getLastName().click();
 		this.updateInformationPage.getLastName().clear();
 		this.updateInformationPage.getLastName().sendKeys(lastName);
 
@@ -38,6 +40,7 @@ public class UpdateInformationAction {
 	}
 
 	public UpdateInformationAction typePhoneNumber(final String phoneNumber) {
+		this.updateInformationPage.getPhone().click();
 		this.updateInformationPage.getPhone().clear();
 		this.updateInformationPage.getPhone().sendKeys(phoneNumber);
 
